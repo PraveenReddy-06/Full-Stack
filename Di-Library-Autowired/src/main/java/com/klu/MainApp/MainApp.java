@@ -11,7 +11,10 @@ public class MainApp {
 		
 		ApplicationContext c1 = new AnnotationConfigApplicationContext(AppConfig.class);
 		
-		Library lib = c1.getBean(Library.class);
+		Library lib = c1.getBean("lib1",Library.class);
 		System.out.println(lib);
+		
+		Library lib1 = c1.getBean("lib2",Library.class);
+		System.out.println(lib1);
 	}
 }

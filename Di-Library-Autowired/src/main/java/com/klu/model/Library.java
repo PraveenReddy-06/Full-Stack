@@ -4,16 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
 public class Library {
 
 	private int libraryId;
 	private String libraryName;
 	
-	@Autowired
 	private Book book;
 	
-	public Library(@Value("99") int libId,@Value("VD") String ln) {
+	public Library(int libId,String ln) {
 		this.libraryId=libId;
 		this.libraryName=ln;
 	}
